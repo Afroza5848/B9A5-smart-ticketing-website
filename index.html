@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,136 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
+    <header>
+        <div class="container mx-auto py-10">
+
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                   
+                  </div>
+                  <a class="btn btn-ghost text-4xl font-raleway font-extrabold text-[#030712]">E-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1 text-[#030712B3] font-raleway font-medium text-xl">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class=" px-[30px] py-[16px] rounded-xl  flex justify-center items-center text-[#1DD100] bg-[#1DD10019] border border-[#1DD10066] font-raleway font-bold text-xl ">Bus <img class="ml-3" src="./images/bus-icon.png" alt=""></a>
+                </div>
+              </div>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- banner section -->
+        <section>
+
+            <div class="container mx-auto mb-28 lg:relative">
+                <div class="hero bg-no-repeat w-full min-h-[80vh] bg-center bg-cover rounded-2xl" style="background-image: linear-gradient(rgba(3, 7, 18, 0.5),rgba(3, 7, 18, 0)), url(./images/banner.png);">
+                    <div class=" bg-opacity-4"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                      <div class="max-w-screen-2xl space-y-6">
+                        <h1 class="mb-5 text-3xl lg:text-6xl font-extrabold text-white lg:leading-[86px]">End-to-End Travel with <br> <span class="text-[#1DD100]">Greenline - Paribahan</span></h1>
+                        <p class="text-[#ffffffB3] text-xl lg:leading-[36px]">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+                        <button class=" px-7 py-5 rounded-xl text-2xl text-[#030712] font-bold bg-[#1DD100] border-none">Buy Tickets</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- users -->
+
+                  <div class="flex justify-center items-center gap-10  lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:flex-row flex-col">
+                        <div class="flex justify-center items-center w-[350px] h-[138px] border-b-4 border-[#1DD100] bg-white rounded-2xl gap-4">
+                            <div><img src="./images/people.png" alt=""></div>
+                            <div>
+                                <h2 class="text-4xl font-bold text-[#030712] font-inter">500K+</h2>
+                                <p class="text-2xl font-inter text-[#03071299]">Registered users</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center w-[350px] h-[138px] border-b-4 border-[#1DD100] bg-white rounded-2xl gap-4">
+                            <div><img src="./images/ticket-cupon.png" alt=""></div>
+                            <div>
+                                <h2 class="text-4xl font-bold text-[#030712] font-inter">1.7 lacks</h2>
+                                <p class="text-2xl font-inter text-[#03071299]">Tickets sold</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center w-[350px] h-[138px] border-b-4 border-[#1DD100] bg-white rounded-2xl gap-4">
+                            <div><img src="./images/stoppage.png" alt=""></div>
+                            <div>
+                                <h2 class="text-4xl font-bold text-[#030712] font-inter">80K+</h2>
+                                <p class="text-2xl font-inter text-[#03071299]">Rental partners</p>
+                            </div>
+                        </div>
+                  </div>   
+
+            </div> 
+        </section>
+
+        <!-- best offer section -->
+        <section>
+
+             <div class="container mx-auto py-16 ">
+
+                <h2 class="text-center text-5xl font-bold text-[#030712] mb-24 mt-10">Best offers for you</h2>
+
+                <div class="grid lg:grid-cols-2 grid-cols-1 gap-12 justify-between items-center lg:flex-row flex-col  ">
+
+                    <div class="flex flex-col lg:flex-row md:flex-row lg:text-left text-center justify-around items-center py-10 px-8 rounded-2xl bg-[#FFBF0F] gap-14 relative">
+                        <div class="space-y-3 lg:border-r-2 lg:border-dashed lg:border-white lg:pr-20">
+                            <h2 class="font-inter text-[#030712cc] text-6xl font-extrabold">15% OFF</h2>
+                            <p class="text-xl font-medium font-inter text-[#030712cc]"> on your next purchase</p>
+                            <p class="font-inter text-[#03071280] text-xl font-medium">use by January 2024</p>
+                        </div>
+                        <div class="space-y-5">
+                            <h2 class="font-bold text-5xl text-[#030712]">NEW15</h2>
+                            <span class="font-medium text-xl text-[#03071280]">Coupon Code</span>
+                        </div>
+    
+    
+                        <div class="w-[80px] h-[80px] rounded-full bg-white absolute -top-10 left-[355px] lg:flex hidden"></div>
+                
+                        <div class="w-[80px] h-[80px] rounded-full bg-white absolute -bottom-10  left-[355px] lg:flex hidden"></div>
+                    </div>
+
+
+
+                    <div class="flex flex-col lg:flex-row md:flex-row justify-around items-center py-10 lg:text-left text-center  px-8 rounded-2xl bg-[#F78C9C] gap-14 relative">
+                        <div class="space-y-3 lg:border-r-2 lg:border-dashed lg:border-white lg:pr-16">
+                            <h2 class="font-inter text-[#030712cc] lg:text-6xl font-extrabold text-3xl">20% OFF</h2>
+                            <p class="text-xl font-medium font-inter text-[#030712cc]"> on your next purchase</p>
+                            <p class="font-inter text-[#03071280] text-xl font-medium">use by January 2024</p>
+                        </div>
+                        <div class="space-y-5">
+                            <h2 class="font-bold font-inter text-3xl text-[#030712]">Couple 20</h2>
+                            <span class="font-medium text-xl text-[#03071280]">Coupon Code</span>
+                        </div>
+    
+    
+                        <div class="w-[80px] h-[80px] rounded-full bg-white absolute -top-10 left-[355px] lg:flex hidden"></div>
+                        
+                        <div class="w-[80px] h-[80px] rounded-full bg-white absolute -bottom-10  left-[355px] lg:flex hidden"></div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center mt-16">
+                    <button class="text-xl font-bold text-[#1DD100] border border-[#1DD100] rounded-xl px-7 py-5 bg-white">See All Offers</button>
+                </div>
+             </div>   
+
+        </section>
+
+
+    </main>
     
 </body>
 </html>
