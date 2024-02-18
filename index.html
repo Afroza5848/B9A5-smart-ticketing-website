@@ -53,7 +53,7 @@
                       <div class="max-w-screen-2xl space-y-6">
                         <h1 class="mb-5 text-3xl lg:text-6xl font-extrabold text-white lg:leading-[86px]">End-to-End Travel with <br> <span class="text-[#1DD100]">Greenline - Paribahan</span></h1>
                         <p class="text-[#ffffffB3] text-xl lg:leading-[36px]">Green Line Paribahan is apparently a family owned transport company <br> specializing in transportation of passenger bus services since 1990.</p>
-                        <button class=" px-7 py-5 rounded-xl text-2xl text-[#030712] font-bold bg-[#1DD100] border-none">Buy Tickets</button>
+                        <button id="buy-ticket" class=" px-7 py-5 rounded-xl text-2xl text-[#030712] font-bold bg-[#1DD100] border-none">Buy Tickets</button>
                       </div>
                     </div>
                   </div>
@@ -143,7 +143,7 @@
 
         <!-- form section -->
 
-        <section class="bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[88px] pb-10">
+        <section id="form-details" class="bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[88px] pb-10 hidden">
 
             <div class="container mx-auto ">
 
@@ -165,7 +165,7 @@
                             <div>
                                 <button class="flex justify-center items-center bg-[#1DD10026] text-[#1DD100] px-7 py-4 rounded-xl font-inter font-bold text-xl">
                                     <img class="mr-2" src="./images/seat-green.png" alt="">
-                                    <span class="mr-1 font-inter font-bold"> 40</span>
+                                    <span id="total-seat" class="mr-1 font-inter font-bold"> 40</span>
                                     Seats Left
                                 </button>
                             </div>
@@ -233,84 +233,84 @@
 
                     <div class="space-y-6">
                         <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-8">
-                            <div class="text-xl font-medium text-[#03071280] font-inter">A</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">A1</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">A2</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">A3</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">A4</div>
+                            <button class="text-xl font-medium text-[#03071280] font-inter">A</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">A1</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">A2</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">A3</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">A4</button>
                         </div>
 
                         <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-8">
-                            <div class="text-xl font-medium text-[#03071280] font-inter">B</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">B1</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">B2</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">B3</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">B4</div>
+                            <button class="text-xl font-medium text-[#03071280] font-inter">B</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">B1</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">B2</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">B3</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">B4</button>
                         </div>
 
                         <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-8">
-                            <div class="text-xl font-medium text-[#03071280] font-inter">C</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">C1</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">C2</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">C3</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">C4</div>
+                            <button class="text-xl font-medium text-[#03071280] font-inter">C</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">C1</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">C2</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">C3</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">C4</button>
                         </div>
 
                         <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-8">
-                            <div class="text-xl font-medium text-[#03071280] font-inter">D</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">D1</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">D2</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">D3</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">D4</div>
+                            <button class="text-xl font-medium text-[#03071280] font-inter">D</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">D1</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">D2</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">D3</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">D4</button>
                         </div>
 
                         <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-8">
-                            <div class="text-xl font-medium text-[#03071280] font-inter">E</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">E1</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">E2</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">E3</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">E4</div>
+                            <button class="text-xl font-medium text-[#03071280] font-inter">E</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">E1</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">E2</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">E3</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">E4</button>
                         </div>
 
 
                         <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-8">
-                            <div class="text-xl font-medium text-[#03071280] font-inter">F</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">F1</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">F2</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">F3</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">F4</div>
+                            <button class="text-xl font-medium text-[#03071280] font-inter">F</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">F1</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">F2</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">F3</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">F4</button>
                         </div>
 
                         <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-8">
-                            <div class="text-xl font-medium text-[#03071280] font-inter">G</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">G1</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">G2</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">G3</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">G4</div>
+                            <button class="text-xl font-medium text-[#03071280] font-inter">G</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">G1</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">G2</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">G3</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">G4</button>
                         </div>
 
                         <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-8">
-                            <div class="text-xl font-medium text-[#03071280] font-inter">H</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">H1</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">H2</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">H3</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">H4</div>
+                            <button class="text-xl font-medium text-[#03071280] font-inter">H</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">H1</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">H2</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">H3</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">H4</button>
                         </div>
 
                         <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-8">
-                            <div class="text-xl font-medium text-[#03071280] font-inter">I</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">I1</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">I2</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">I3</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">I4</div>
+                            <button class="text-xl font-medium text-[#03071280] font-inter">I</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">I1</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">I2</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">I3</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">I4</button>
                         </div>
 
                         <div class="flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-8">
-                            <div class="text-xl font-medium text-[#03071280] font-inter">J</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">J1</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">J2</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">J3</div>
-                            <div class="text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">J4</div>
+                            <button class="text-xl font-medium text-[#03071280] font-inter">J</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">J1</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">J2</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">J3</button>
+                            <button class="seat text-xl font-medium text-[#03071280] font-inter bg-[#F7F8F8] px-10 py-4 rounded-xl">J4</button>
                         </div>
 
                     </div>
@@ -326,52 +326,36 @@
                               <thead>
                                 <tr class="lg:text-xl">
                                   
-                                  <th>Seat <sup class="bg-[#1DD100] px-4 rounded-xl lg:text-xl  text-white">2</sup></th>
+                                  <th>Seat <sup id="seat-count" class="bg-[#1DD100] px-4 rounded-xl lg:text-xl  text-white">2</sup></th>
                                   <th>Class</th>
                                   <th>price</th>
                                 </tr>
                               </thead>
-                              <tbody >
+                              <tbody id="seat-name-container">
                                 <!-- row 1 -->
-                                <tr>
-                                 
-                                  <td>C1</td>
-                                  <td>Company</td>
-                                  <td>550</td>
+                                <tr >
+
                                 </tr>
-                                <!-- row 2
-                                <tr>
-                                  
-                                  <td>Hart Hagerty</td>
-                                  <td>Desktop Support Technician</td>
-                                  <td>Purple</td>
-                                </tr>
-                                <!-- row 3 -->
-                                <!-- <tr>
-                                  
-                                  <td>Brice Swyre</td>
-                                  <td>Tax Accountant</td>
-                                  <td>Red</td>
-                                </tr> --> 
+                                
                               </tbody>
                             </table>
                           </div>
                           <!-- total -->
                           <div class="flex justify-between items-center border-t pt-8 border-[#03071219] text-[#030712]">
                             <h4 class="font-inter font-semibold text-xl">Total Price</h4>
-                            <h2 class="font-inter font-semibold text-xl"> BDT <span class="font-inter ml-2">110</span></h2>
+                            <h2 class="font-inter font-semibold text-xl"> BDT <span id="total-price" class="font-inter ml-2">0</span></h2>
                           </div>
 
                           <!-- apply -->
                           <div class="join w-full my-8">
                             <input class="input w-full p text-xl  join-item" placeholder="Have any copupon?"/>
-                            <button class="btn join-item font-bold  bg-[#1DD100] text-white mb-2">Apply</button>
+                            <button id="apply-btn" class="btn join-item font-bold  bg-[#1DD100] text-white mb-2" disabled>Apply</button>
                           </div>
 
                           <!-- grandtotal -->
                           <div class="flex justify-between items-center text-[#030712]">
                             <h4 class="font-inter font-semibold text-xl">Grand Total</h4>
-                            <h2 class="font-inter font-semibold text-xl"> BDT <span class="font-inter ml-2">110</span></h2>
+                            <h2 class="font-inter font-semibold text-xl"> BDT <span id="grand-total" class="font-inter ml-2">0</span></h2>
                           </div>
 
                     </div>
@@ -446,5 +430,8 @@
         </div>
       </footer>
     
+
+      <script src="./js/utility.js"></script>
+      <script src="./js/scripts.js"></script>
 </body>
 </html>
