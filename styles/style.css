@@ -6,3 +6,12 @@
 .font-inter{
     font-family: "Inter", sans-serif;
 }
+td{
+    font-family: "Inter", sans-serif;
+    border: none; 
+    font-size: 18px;
+    font-weight: 500;
+}
+input{
+    font-family: "Inter", sans-serif;
+}
