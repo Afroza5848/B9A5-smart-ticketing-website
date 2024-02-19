@@ -326,7 +326,7 @@
                               <thead>
                                 <tr class="lg:text-xl">
                                   
-                                  <th>Seat <sup id="seat-count" class="bg-[#1DD100] px-4 rounded-xl lg:text-xl  text-white">2</sup></th>
+                                  <th>Seat <sup id="seat-count" class="bg-[#1DD100] px-4 rounded-xl lg:text-xl  text-white">0</sup></th>
                                   <th>Class</th>
                                   <th>price</th>
                                 </tr>
@@ -347,13 +347,13 @@
                           </div>
 
                           <!-- apply -->
-                          <div class="join w-full my-8">
-                            <input class="input w-full p text-xl  join-item" placeholder="Have any copupon?"/>
+                          <div id="apply-box" class="join w-full my-8">
+                            <input id="input-text" class="input w-full p text-xl  join-item" placeholder="Have any copupon?"/>
                             <button id="apply-btn" class="btn join-item font-bold  bg-[#1DD100] text-white mb-2" disabled>Apply</button>
                           </div>
 
                           <!-- grandtotal -->
-                          <div class="flex justify-between items-center text-[#030712]">
+                          <div class="flex justify-between items-center text-[#030712] mt-4">
                             <h4 class="font-inter font-semibold text-xl">Grand Total</h4>
                             <h2 class="font-inter font-semibold text-xl"> BDT <span id="grand-total" class="font-inter ml-2">0</span></h2>
                           </div>
@@ -365,28 +365,48 @@
                         <label class="form-control w-full ">
                             <div class="label">
                               <span class="label-text font-semibold text-xl">Passenger Name*</span>
+                              
                             </div>
-                            <input type="text" placeholder="Enter your name" class="input input-bordered py-8 text-xl w-full ]" />
+                            <input id="input-name" type="text" placeholder="Enter your name" class="input input-bordered py-8 text-xl w-full"/>
                             
                           </label>
 
                           <label class="form-control w-full ">
                             <div class="label">
                               <span class="label-text font-semibold text-xl">Phone Number*</span>
+                              
+                              
                             </div>
-                            <input type="number" placeholder="Enter your phone number" class="input input-bordered py-8 text-xl w-full ]" />
+                            <input id="input-number" type="text" placeholder="Enter your phone number" class="input input-bordered py-8 text-xl w-full " required/>
                             
                           </label>
 
                           <label class="form-control w-full ">
                             <div class="label">
                               <span class="label-text font-semibold text-xl">Email ID</span>
+                              
                             </div>
-                            <input type="email" placeholder="Enter your email id" class="input input-bordered py-8 text-xl w-full ]" />
+                            <input id="input-email" type="email" placeholder="Enter your email id" class="input input-bordered py-8 text-xl w-full ]" />
                             
                           </label>
 
-                          <button class="bg-[#1DD100] w-full py-6 font-inter rounded-2xl text-center text-white font-bold text-xl">Next</button>
+                          <!-- Open the modal using ID.showModal() method -->
+                            <button id="next-btn" class="btn btn-wide bg-[#1DD100] w-full font-inter text-white font-bold text-xl" disabled onclick="my_modal_1.showModal()">Next</button>
+                            <dialog id="my_modal_1" class="modal">
+                            <div class="modal-box flex flex-col justify-center items-center text-center py-10 ">
+                                <img class="mb-8" src="./images/success.png" alt="">
+                                <h3 class="font-bold text-lg">Thank you for Booking Our Bus Seats. 
+                                    We are working hard to find the best service and deals for you. 
+                                    </h3>
+                                <p class="py-4">Shortly you will find a confirmation in your email.</p>
+                                <div class="modal-action">
+                                <form class="w-full" method="dialog">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button class="btn px-20 rounded-full bg-green-500 text-white">Continue</button>
+                                </form>
+                                </div>
+                            </div>
+                            </dialog>
                     </div>
 
                     <div class="flex justify-around items-center text-2xl lg:flex-row flex-col">

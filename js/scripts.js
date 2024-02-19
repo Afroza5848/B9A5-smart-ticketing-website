@@ -1,4 +1,4 @@
-
+// going form page to buy ticket
 document.getElementById('buy-ticket').addEventListener('click', function() {
     
     const ticketForm = document.getElementById('form-details');
@@ -16,8 +16,22 @@ for(const seat of seats){
 
     seat.addEventListener('click', function(e){
 
+        clickCount++;
+        if(clickCount > 4){
+            seat.removeEventListener();
+            
+        }
+        // apply bn enable
+        if(clickCount >= 4){
+            document.getElementById("apply-btn").removeAttribute("disabled");
+        }
+        
+
+        
+        // disabled btn
         e.target.setAttribute("disabled","");
 
+        // click visible
         e.target.style.backgroundColor = "#1DD100";
         e.target.style.color = "#fff";
         
@@ -51,18 +65,88 @@ for(const seat of seats){
 
         seatNameContainer.appendChild(tr);
 
-        // apply bn enable
-        document.getElementById("apply-btn").removeAttribute("disabled");
-
+        
         // total price calculate
         
         calculateTotalPrice("total-price");
         calculateTotalPrice("grand-total");
-        
-        console.log(seat.innerText);
-        
-        
+
+        // next btn function
+        document.getElementById('input-number').addEventListener('keyup', function(){
+            const inputNumber = parseInt(document.getElementById('input-number').value);
+            console.log(typeof inputNumber);
+                if(!isNaN(inputNumber)){
+                    document.getElementById('next-btn').removeAttribute("disabled");
+                }
+                else{
+                    document.getElementById('next-btn').setAttribute("disabled", "true");
+                    alert('!!opps Please Give Me The Number.')
+                    
+                }
+         })
+        // next btn function end
         
     })
 }
+     
+  
 
+// apply button
+
+document.getElementById('apply-btn').addEventListener('click', function(e){
+    // when apply button click ,this button remove
+    const applyBox = document.getElementById('apply-box');
+    applyBox.classList.add('hidden');
+    // 15 % discount
+    const inputText = document.getElementById('input-text').value;
+    if(inputText === "NEW15"){
+        const totalPrice = parseFloat(document.getElementById("total-price").innerText);
+        const discount = totalPrice * 0.15;
+        const grandTotalPrice = totalPrice - discount;
+
+        document.getElementById("grand-total").innerText = grandTotalPrice;
+        document.getElementById('input-text').value = "";
+       
+    }
+    // 20% discount
+    else if(inputText === "Couple 20"){
+        const totalPrice = parseFloat(document.getElementById("total-price").innerText);
+        const discount = totalPrice * 0.2;
+        const grandTotalPrice = totalPrice - discount;
+
+        document.getElementById("grand-total").innerText = grandTotalPrice;
+        document.getElementById('input-text').value = "";
+        
+    }
+    else{
+    
+        alert('Invalid Coupon Code!');
+        document.getElementById('input-text').value = "";
+        const applyBox = document.getElementById('apply-box');
+        applyBox.classList.remove('hidden');
+    }
+    
+    
+   
+})
+
+// next button
+document.getElementById('next-btn').addEventListener('click', function(){
+    
+    const inputName = document.getElementById('input-name').value;
+    const inputNumber = document.getElementById('input-number').value;
+    const inputEmail = document.getElementById('input-email').value;
+
+
+    if(inputName === "" || inputNumber === "" || inputEmail === ""){
+        // 
+        alert('Oppps!!! Please Fill Up Input Field.');
+        document.getElementById('my_modal_1').close();
+    }
+    else{
+        document.getElementById('my_modal_1').showModal();
+    }
+    
+
+   
+})

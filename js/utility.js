@@ -4,10 +4,3 @@ function calculateTotalPrice(id){
     elementId.innerText = totalPrice;
 }
 
-// let clickCount = 0;
-// function buttonClicked(tag){
-//     clickCount++;
-//     if(clickCount >= 4){
-//         document.querySelectorAll(tag).disabled = true;
-//     }
-// }
